@@ -1,0 +1,38 @@
+<model>
+    <mount>/system/user+</mount>
+    <version>1.0.0</version>
+    <items>
+        <user type="ArrayField">
+            <name type="TextField"/>
+            <disabled type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </disabled>
+            <scope type="TextField"/>
+            <expires type="TextField"/>
+            <authorizedkeys type="TextField"/>
+            <uid type="IntegerField"/>
+            <otp_seed type="TextField"/>
+            <shell type="OptionField">
+                <BlankDesc>Default (none for all but root)</BlankDesc>
+                <OptionValues>
+                    <o0 value="/bin/csh">/bin/csh</o0>
+                    <o1 value="/bin/sh">/bin/sh</o1>
+                    <o2 value="/bin/tcsh">/bin/tcsh</o2>
+                </OptionValues>
+            </shell>
+            <user_dn type="TextField"/>
+            <password type="TextField"/>
+            <landing_page type="TextField"/>
+            <comment type="TextField"/>
+            <email type="TextField"/>
+            <apikeys type=".\ApiKeyField"/>
+            <priv type=".\PrivField">
+                <Multiple>Y</Multiple>
+            </priv>
+            <descr type="DescriptionField">
+                <Required>Y</Required>
+            </descr>
+        </user>
+    </items>
+</model>
